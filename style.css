@@ -213,9 +213,9 @@ body {
 }
 
 #logo_in_page img {
-    width: 50px;
+    width: 5rem;
     height: auto;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0rem;
 }
 
 #logo_in_page {
@@ -224,7 +224,7 @@ body {
     color: var(--third_color_full);
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    gap: 0.5rem;
     align-items: center;
 }
 
@@ -565,7 +565,7 @@ body {
 
 #about_us {
     padding: 1rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     background: linear-gradient(to right, var(--third_color), #1c1c1c);
     display: flex;
 }
@@ -821,39 +821,78 @@ canvas {
     color: var(--secondary_color_full);
 }
 
-
-
-/* 2xl */
-@media (max-width: 1536px) {
-    html {
-        font-size: 16px; /* Adjust font size for 2xl */
-    }
+/*footer*/
+.club-footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+    background-color: var(--background_color);
+    color: var(--text_color);
+    border-top: 1px solid var(--border_color);
 }
 
-/* xl */
-@media (max-width: 1280px) {
-    html {
-        font-size: 12px; /* Adjust font size for xl */
-    }
+.footer-logo img {
+    width: 100px;
+    height: auto;
 }
 
-/* lg */
-@media (max-width: 1024px) {
-    html {
-        font-size: 10px; /* Adjust font size for lg */
-    }
+.footer-contact, .footer-socials, .footer-links, .footer-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-/* md */
+.footer-socials a {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--text_color);
+}
+
+.footer-socials a:hover {
+    color: var(--highlight_color);
+}
+
+.footer-links a {
+    margin-bottom: 0.5rem;
+    color: var(--link_color);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-cta p {
+    font-weight: bold;
+}
+
+.footer-cta a {
+    color: var(--cta_color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-cta a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    html {
-        font-size: 16px; /* Adjust font size for md */
+    .club-footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-logo,
+    .footer-contact,
+    .footer-socials,
+    .footer-links,
+    .footer-cta {
+        align-items: center;
+    }
+
+    .footer-socials a {
+        margin: 0.5rem;
     }
 }
-
-
-
-
-
-
-
