@@ -655,26 +655,24 @@ canvas {
 }
 
 .section_title{
-    margin: 1rem;
+    margin: 5rem 1rem 1rem;
     font-size: 5rem;
     color: var(--third_color_full);
     text-decoration: underline;
     text-transform: uppercase;
-
 }
 
 /* Events List */
 .events_list {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 5 columns */
+    grid-template-rows: repeat(2, 1fr);
     gap: 0.4rem;
 }
 
 /* Individual Event */
-/* ... (your existing styles) */
-
 .the_event {
-    width: auto; /* Set the initial width */
+    width: auto;
     border-radius: 8px;
     min-width: 5rem;
     min-height: 23rem;
@@ -685,50 +683,20 @@ canvas {
     backdrop-filter: blur(1.2px);
     display: flex;
     transition: width 1.5s ease-in-out, height 1s ease-out;
-}
-
-/* ... (your existing styles) */
-
-
-.the_event.pre {
-    width: 6rem;
-    writing-mode: vertical-lr;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: var(--third_color_full);
-}
-
-/* Event Content */
-.event_content {
     flex-grow: 1;
     color: var(--third_color_full);
 }
 
-/* Event Icon */
-.the_event > i {
-    align-self: flex-end;
-    justify-self: flex-end;
-    font-size: 1.3rem;
-    color: var(--background_color);
-    transition: all 0.5s ease-out;
+.event_content {
+    padding: 0.6rem; /* Apply post padding by default */
 }
 
-/* Post Event Styles */
-.the_event.post > i {
-    transform: rotate(-180deg);
-}
-
-.the_event.post > .event_content {
-    padding: 0.6rem;
-}
-
-.the_event.post > .event_content > .date {
+.event_content > .date {
     margin: 0.5rem 0;
     color: var(--secondary_color_full);
     font-size: 1rem;
 }
 
-/* Event Title */
 .event_title {
     text-transform: uppercase;
     font-weight: 700;
@@ -736,35 +704,122 @@ canvas {
     margin: 1rem 0;
 }
 
-/* Theme Section */
-.the_event.post > .event_content > .theme {
+.event_content > .theme {
     margin: 1.2rem 0;
 }
 
-.the_event.post > .event_content > .theme > h3 {
+.event_content > .theme > h3 {
     color: var(--third_color_full);
 }
 
-.the_event.post > .event_content > .theme > ul {
+.event_content > .theme > ul {
     display: flex;
     gap: 2rem;
     margin-left: 1rem;
     margin-top: 0.5rem;
 }
 
-/* Pre Event Content */
-.pre > .event_content > :not(.event_title) {
-    display: none;
-}
-
-.pre > .event_content > .event_title {
-    display: flex;
-}
-
-.post > .event_content > *{
+.post > .event_content > * {
     transition: 1s;
 }
 
+/*members*/
+
+.members_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns in the first row */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+    gap: 2rem;
+    max-width: 80%;
+    margin: auto;
+}
+
+/* Adjust the grid for the second row */
+.members_list > .member:nth-child(1) ~ .member {
+    grid-column: span 2;
+}
+.members_list > .member:nth-child(2) ~ .member {
+    grid-column: span 1;
+}
+
+
+@media (max-width: 768px) {
+    .members_list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .members_list > .member:nth-child(5) ~ .member {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .members_list {
+        grid-template-columns: 1fr;
+    }
+    .members_list > .member:nth-child(5) ~ .member {
+        grid-column: span 1;
+    }
+}
+
+.member {
+    background-color: var(--secondary_color);
+    border: solid var(--third_color);
+    border-radius: 8px;
+    padding: 0.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(1.2px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.member_image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.member_content {
+    flex-grow: 1;
+    color: var(--third_color_full);
+}
+
+.member_name {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--third_color_full);
+    margin: 0.5rem 0;
+}
+
+.member_title {
+    font-size: 1rem;
+    color: var(--secondary_color_full);
+    margin: 0.5rem 0;
+}
+
+.member_socials {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.social_link i {
+    color: var(--third_color_full);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social_link:hover i {
+    color: var(--secondary_color_full);
+}
 
 
 
