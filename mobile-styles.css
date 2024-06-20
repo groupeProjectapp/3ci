@@ -1,0 +1,108 @@
+/*loading*/
+
+/*.background {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);*/
+/*    z-index: 300;*/
+/*    background-color: var(--third_color_full);*/
+/*    display: grid;*/
+/*    grid-template-rows: repeat(3, 1fr);*/
+/*}*/
+
+/*.loading_title {*/
+/*    grid-row: 2;*/
+/*    width: 100%;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    text-align: center;*/
+/*    font-size: 4rem;*/
+/*    font-weight: 1000;*/
+/*    color: rgb(255, 255, 255);*/
+/*    background-color: rgb(0, 33, 76);*/
+/*    z-index: 500;*/
+/*    mix-blend-mode: darken;*/
+/*    user-select: none;*/
+/*}*/
+
+/*.its_background {*/
+/*    background-color: #ffffff;*/
+/*    grid-area: 2 / 3 / 3 / 4;*/
+/*    z-index: 400;*/
+/*    width: 5%;*/
+/*    position: relative;*/
+/*    height: 90%;*/
+/*}*/
+
+/*@keyframes moveLeftAndRight {*/
+/*    0%, 100% {*/
+/*        left: 2%;*/
+/*    }*/
+/*    50% {*/
+/*        left: 93%;*/
+/*    }*/
+/*}*/
+
+/*.its_background.pre {*/
+/*    animation: moveLeftAndRight 4s linear infinite;*/
+/*}*/
+
+.nav_links {
+    display: none;
+}
+
+.button {
+    display: none;
+}
+
+.container {
+    width: 100%;
+}
+
+#logo_in_page {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+#logo_in_page img {
+    width: 10rem;
+}
+
+.more_slogan_yippi{
+    display: none;
+}
+
+#about_us{
+    display: flex;
+    flex-direction: column;
+}
+
+.idk{
+    font-size: 2rem;
+}
+
+.content{
+    padding: 1rem;
+}
+
+.events_list{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.members_list{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.members_list > .member:nth-child(1) ~ .member {
+    grid-column: span 1;
+}

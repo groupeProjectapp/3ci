@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-
     <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                var link = document.createElement("link");
+                link.rel = "stylesheet";
+                link.href = "mobile-styles.css";
+                document.head.appendChild(link);
+            }
+        });
+    </script>
     <script src="JQuery.js"></script>
     <title>ESC</title>
 </head>
 <body>
 
 <!--loading-->
-<!--<div class="background">-->
-<!--    <div class="loading_title">ESC</div>-->
-<!--    <div class="its_background pre">-->
-<!--        <div id="rectangle"></div>-->
-<!--    </div>-->
-<!--</div>-->
+<div class="background">
+    <div class="loading_title">ESC</div>
+    <div class="its_background pre">
+        <div class="rectangle"></div>
+        <div class="rectangle2"></div>
+    </div>
+</div>
 
 
 <!--particles-->
@@ -39,7 +50,7 @@
             <!--            <li class="nav_item"><a href="#Meet_Our_Team">Meet_Our_Team</a></li>-->
             <li class="nav_item"><a href="#Meet_Our_Team">Meet Our Team</a></li>
         </ul>
-        <a href="#" class="button type--B">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aitouryahia@gmail.com" target="_blank" class="button type--B">
             <div class="button__line"></div>
             <div class="button__line"></div>
             <span class="button__text">Contact Us</span>
@@ -210,7 +221,7 @@
         <H1 class="section_title">Meet our team</H1>
         <div class="members_list">
             <div class="member">
-                <img src="path/to/image.jpg" alt="Member Name" class="member_image">
+                <img src="assets/Images/club_logo_full.jpg" alt="Member Name" class="member_image">
                 <h3 class="member_name">Member Name</h3>
                 <p class="member_title">Member Title</p>
                 <div class="member_socials">
@@ -285,27 +296,29 @@
 </div>
 <!-- Footer -->
 <footer class="club-footer">
-    <div class="footer-section footer-logo">
+    <div class="footer-logo">
         <img src="assets/Images/club_logo_full-modified.png" alt="Club Logo">
     </div>
     <div class="footer-section footer-contact">
         <h4>Contact Us</h4>
         <p>Email: <a href="mailto:info@club.com">info@club.com</a></p>
+        <P>06694201</P>
     </div>
-    <div class="footer-section footer-socials">
+    <div class="footer-socials">
         <h4>Follow Us</h4>
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <div class="member_socials">
+            <a href="#" class="social_link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social_link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social_link"><i class="fab fa-linkedin-in"></i></a>
         </div>
     </div>
     <div class="footer-section footer-links">
         <h4>Quick Links</h4>
-        <a href="#about_us">About Us</a>
-        <a href="#Events">Events</a>
-        <a href="#membership">Membership</a>
-        <a href="#contact_us">Contact Us</a>
+        <div class="the-links-footer">
+            <a href="#about_us">About Us</a>
+            <a href="#Events">Events</a>
+            <a href="#membership">Meet Our Team</a>
+        </div>
     </div>
 </footer>
 

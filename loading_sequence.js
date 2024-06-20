@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let isLoad = false
+    let isLoad = true
     if (isLoad) {
         setTimeout(function () {
             $(".its_background").fadeOut(500, function () {
