@@ -1,3 +1,3 @@
-import { injectSpeedInsights } from '@vercel/speed-insights';
+import { injectSpeedInsights } from 'node_modules/analytics/';
 
 injectSpeedInsights();
